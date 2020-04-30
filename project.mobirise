@@ -1,0 +1,170 @@
+{
+  "settings": {
+    "name": "Tal Hendricse",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise-amp",
+      "title": "Mobirise AMP",
+      "styling": {
+        "primaryColor": "#4ea2e3",
+        "secondaryColor": "#4addff",
+        "successColor": "#0dcd7b",
+        "infoColor": "#8282e7",
+        "warningColor": "#767676",
+        "dangerColor": "#a0a0a0",
+        "mainFont": "Roboto",
+        "display1Font": "Roboto",
+        "display1Size": 4.5,
+        "display2Font": "Roboto",
+        "display2Size": 2.2,
+        "display5Font": "Roboto",
+        "display5Size": 1.8,
+        "display7Font": "Roboto",
+        "display7Size": 1.1,
+        "display4Font": "Roboto",
+        "display4Size": 0.9,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#4ea2e3"
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.12.3",
+    "siteFonts": [
+      {
+        "css": "'Roboto', sans-serif",
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "imageResize": true,
+    "favicon": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 8,
+    "versionPublish": "4.12.3",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/soundcloud-image-render-2-1040x1040.png\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#0dd1ff\">\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <h1 class=\"mbr-section-title mbr-fonts-style align-right mbr-bold mbr-white mbr-pt-1 mbr-pb-3\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n            <b>Tal Hendrickse</b></h1>\n        <h3 class=\"mbr-section-subtitle mbr-fonts-style align-right mbr-white mbr-light mbr-pt-1 mbr-pb-3\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubTitle\">\n            Sound designer, Producer, Programmer</h3>\n        <p class=\"mbr-fonts-style mbr-text align-right mbr-pt-1 mbr-pb-3 mbr-white\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">\n            Full width intro with adjustable height, background image. Click any text to edit or style it.\n        </p>\n        <div class=\"mbr-section-btn align-right\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">\n                LEARN MORE\n            </a></div>\n    </div>\n\n</section>",
+          "_cid": "rXF91IgqOy",
+          "_anchor": "header1-3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".counter-container": {
+              "li when (@stylizedCounters)": {
+                "list-style": "none",
+                "position": "relative",
+                "&:before": {
+                  "position": "absolute",
+                  "left": "-55px",
+                  "content": "''",
+                  "display": "inline-block",
+                  "margin": "10px 15px",
+                  "line-height": "20px",
+                  "width": "10px",
+                  "height": "10px",
+                  "& when (@countersType = 'circle')": {
+                    "border": "1px solid @counterColor",
+                    "color": "@counterColor"
+                  },
+                  "& when not (@countersType = 'circle')": {
+                    "color": "contrast(@counterColor)",
+                    "background": "@counterColor"
+                  },
+                  "& when not (@countersType = 'square') and not (@countersType = 'romb')": {
+                    "border-radius": "50%"
+                  },
+                  "& when (@countersType = 'romb')": {
+                    "-webkit-transform": "rotate(45deg)",
+                    "transform": "rotate(45deg)"
+                  }
+                }
+              }
+            }
+          },
+          "_name": "content7",
+          "_customHTML": "<section class=\"content7 mbr-section\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"color\" title=\"Counter Color\" name=\"counterColor\" value=\"#4ea2e3\" condition=\"stylizedCounters\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <select title=\"Counters Type\" name=\"countersType\" condition=\"stylizedCounters\">\n            <option value=\"default\">Сircle Fill</option>\n            <option value=\"circle\">Circle</option>\n            <option value=\"square\">Square</option>\n            <option value=\"romb\" selected>Rhombus</option>\n\n        </select>   \n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"mbr-row mbr-jc-c\">\n            <div class=\"mbr-text counter-container mbr-fonts-style mbr-col-lg-8 mbr-col-md-12 mbr-col-sm-12\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                <ul>\n                    <li class=\"mbr-pb-2\"><b>PERFOMANCE</b> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nisi debitis quibusdam sint, in neque ut sapiente saepe reiciendis quia, amet, accusamus alias numquam ipsum quo quae deserunt laborum sed! <a href=\"https://mobirise.co/\">Try it now!</a></li>\n                    <li class=\"mbr-pb-2\"><b>ENGAGEMENTS</b> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil ut soluta eos, sint ex ad tenetur dolore at inventore, ipsam ullam molestiae magnam repellat quod earum in sed assumenda! <a href=\"https://mobirise.co/\">Try it now!</a></li>\n                    <li class=\"mbr-pb-2\"><b>FLEXIBILITY</b> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nulla assumenda magni temporibus sapiente optio ullam quia. Deserunt quod a ab, ullam ea sed, corrupti consequuntur necessitatibus maiores exercitationem ut. <a href=\"https://mobirise.co/\">Try it now!</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rXF9XhgvnU",
+          "_anchor": "content7-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "& when not (@fullWidth)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@fullWidth)": {
+              ".mbr-row": {
+                "margin": "0"
+              }
+            },
+            ".video-block": {
+              "& when not (@fullWidth)": {
+                "width": "~\"@{videoSize}%\"",
+                "@media (max-width: 767px)": {
+                  "width": "100% !important"
+                }
+              },
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "vimeo1",
+          "_customHTML": "<section class=\"vimeo1\" group=\"Images & Videos\" plugins=\"amp-main,amp-vimeo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"range\" inline title=\"Width\" name=\"videoSize\" min=\"20\" max=\"100\" value=\"66\" step=\"1\" condition=\"fullWidth == false\">\n        <input type=\"text\" title=\"Vimeo Video URL\" name=\"videoUrl\" value=\"https://vimeo.com/347833855\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': fullWidth == false}\">\n        <div class=\"mbr-row mbr-jc-c\">\n            <div class=\"video-title mbr-col-sm-12 align-center\" mbr-class=\"{'mbr-col-md-6': !fullWidth,\n                             'mbr-col-md-12':fullWidth}\">\n                <h2 class=\"mbr-section-title mbr-fonts-style mbr-light\" mbr-class=\"{'mbr-pb-5': !fullWidth, 'mbr-py-2': fullWidth}\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .video-title\">\n                    PORTFOLIO</h2>\n            </div>\n            <div class=\"video-block mbr-m-auto\">\n                <amp-vimeo data-videoid=\"60855585\" layout=\"responsive\" width=\"16\" height=\"9\" class=\"mobirise-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                </amp-vimeo>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rXF9tyXOrp",
+          "_anchor": "vimeo1-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
